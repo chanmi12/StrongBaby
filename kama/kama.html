@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="kama.css" />
+  <title>팀플/카마이클 페이지</title>
+</head>
+
+<body>
+  <header id="header">
+    <div>
+      <h1>
+        <p id="cama">카마이클</p>
+      </h1>
+    </div>
+  </header>
+  
+  <nav>
+    <div class="topnav">
+      <a href="../kai/kai.html">카이퍼</a>
+      <a href="kama.html">카마이클</a>
+      <a href="../son/son.html">손양원</a>
+      <a href="../yo/yo.html">열송학사</a>
+      <a href="../to/to.html">토레이</a>
+      <a href="../jang/jang.html">장기려</a>
+    </div>
+  </nav>
+
+  <aside> <video width="100%" height="100%" autoplay muted controls>
+    <source src="../kai/RCcharacter.mp4" type="video/mp4">
+</video>
+<h3>🧡카마이클 10초 일기🧡</h3>
+  <div id="input-area">
+    <textarea id="comment-input" rows="4" placeholder="댓글을 입력하세요..."></textarea>
+    <button onclick="addComment()">댓글 저장</button>
+  </div>
+  <div id="comment-section">
+    <div id="comments"></div>
+  </div></aside>
+  
+<section>
+  <OL>
+      <img src="콜링.png" alt="카마이클 사진 1" width="600" height="600"><br>
+      <h2><span style="color:rgb(222, 37, 111);font-weight:bolder">💭SHARE YOUR CALLINGS👂</span></h2>
+    <h3><br>Carmichael Student Council is looking for 𝐑𝐄𝐀𝐋-𝐋𝐈𝐅𝐄 𝐬𝐭𝐨𝐫𝐢𝐞𝐬 about 👏your calling👏!
+          <br>
+          <br>👀 What we want to hear from you are...
+          <br>
+          <br>- What was your calling?
+          <br>- What did you learn from following the calling?
+          <br>- Your tips on following the calling?
+          <br>
+          <br>The stories can be about how you came to Handong, unexpected life changes, a calling to a special position, and many more!
+          <br>
+          <br>Please send us your special stories within 500 words and grab a chance to share your calling, and ₩50,000 worth prizes.
+           <br>활동기간: 5월 25일
+           <br>상금: ₩50,000<br></h3>
+
+
+           <br> <img src="EOSB.png" alt="카마이클 사진 1" width="600" height="600"><br>
+   <h2><span style="color:rgb(222, 37, 111);font-weight:bolder">🎉EOSB (End of Semester Banquet)🎉</span></h2>
+   <h3><br>The biggest event in Carmichael, the end-of-semester event, EOSB, is a meaningful time to celebrate 
+   <br>the end of the semester by gathering with Carmichael RC people who have been together as family members, 
+   <br>get closer through various activities, and say goodbye to graduating students.
+   <br>활동기간: 13주차 [5월 31일]<br></h3>
+          
+   <br>
+   <img src="메리.png" alt="카마이클 사진 1" width="600" height="600"><br>
+   <h2><span style="color:rgb(222, 37, 111);font-weight:bolder">🎅Merry Carmichael🎄</span></h2>
+  <h3><br>Spend Christmas together with Carmichael
+   <br>
+   <br>Carmichael Student Council is bringing Christmas into I-House with GRAND prizes for the event participants!
+   <br>
+   <br>- Daily Missions(Match Outfit, Breakfast together, Rolling Paper, Let's sing carols)
+   <br>- Quiz Night
+   <br>- Lucky Draw
+   <br>활동기간: 13주차<br></h3>
+              
+   <br><img src="방빙고.png" alt="카마이클 사진 1" width="600" height="600"><br>
+    <h2><span style="color:rgb(222, 37, 111);font-weight:bolder">📋Room Bingo☑</span></h2>
+    <h3><br>The Bang Bingo event, in which all residents of the international hall participate, 
+    <br>is a time to build friendship with roommates at the beginning of the semester. Through real-time broadcasts, 
+    <br>it is a special time to play bingo games with other international hall students at the same time to feel the strength of Carmichael RC.
+    <br>활동기간: 9월 13일<br></h3>
+          </OL></section>
+
+<article>
+  <h3>담당 목사님과 헤드마스터</h3>
+
+  <div class="row">
+      <div class="column">
+          <div class="card">
+              <img src="최성호목사님.png" alt="최성호" style="width:70%">
+              <div class="container">
+                  <h3>최성호 목사님</h3>
+                  <p class="title">효암채플 별관 105호
+                  </p>
+                  <p>sunghochoi@handong.edu</p>
+                  <button class="button"><a href="https://rc.handong.edu/40/4080.do">상세정보</a>
+              </div>
+          </div>
+      </div>
+
+
+      <p>
+      <div class="row">
+          <div class="column">
+              <div class="card">
+                  <img src="Shushan Marie Richardson.webp" alt="Shushan Marie Richardson" style="width:70%">
+                  <div class="container">
+                      <h3>Shushan Marie Richardson 교수님</h3>
+                      <p class="title">언어교육원 210호</p>
+                      <p>srichardson@handong.edu</p>
+                      <button class="button"><a href="https://rc.handong.edu/40/4080.do">상세정보</a>
+              </div>
+          </div>
+
+
+          </p>
+</article>
+
+  <div class="article2">
+    <img src="카마건.jpg" alt="카마이클 건물 사진" width="100%" height="100%">
+  </div>
+
+  <script>const image = document.getElementById('image');
+
+    image.addEventListener('mouseover', () => {
+      image.style.transform = 'scale(2)';
+    });
+  
+    image.addEventListener('mouseout', () => {
+      image.style.transform = 'scale(1)';
+    });
+
+    function addComment() {
+      const commentInput = document.getElementById("comment-input");
+      const comments = document.getElementById("comments");
+
+      // 입력 값 가져오기
+      const commentText = commentInput.value.trim();
+      if (commentText === "") {
+        alert("댓글을 입력하세요!");
+        return;
+      }
+
+      // 새로운 댓글 요소 생성
+      const newComment = document.createElement("div");
+      newComment.className = "comment";
+      newComment.textContent = commentText;
+
+      // 화면에 추가
+      comments.appendChild(newComment);
+
+      // 입력란 초기화
+      commentInput.value = "";
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="to.css" />
+  <title>팀플/토레이 페이지</title>
+</head>
+
+<body>
+  <header id="header">
+    <div>
+      <h1>
+        <p id="to">토레이</p>
+      </h1>
+    </div>
+  </header>
+
+  <nav>
+    <div class="topnav">
+      <a href="../kai/kai.html">카이퍼</a>
+      <a href="../kama/kama.html">카마이클</a>
+      <a href="../son/son.html">손양원</a>
+      <a href="../yo/yo.html">열송학사</a>
+      <a href="to.html">토레이</a>
+      <a href="../jang/jang.html">장기려</a>
+    </div>
+  </nav>
+
+  <aside> <video width="100%" height="100%" autoplay muted controls>
+    <source src="../kai/RCcharacter.mp4" type="video/mp4">
+</video>
+<h3>💛토레이 10초 일기💛</h3>
+  <div id="input-area">
+    <textarea id="comment-input" rows="4" placeholder="댓글을 입력하세요..."></textarea>
+    <button onclick="addComment()">댓글 저장</button>
+  </div>
+  <div id="comment-section">
+    <div id="comments"></div>
+  </div></aside>
+
+<section>
+  <OL>
+    <div>
+    <img src="얼리베어.png" alt="토레이 얼리베어 행사" width="600" height="600"><br>
+    <h2><span style="color:rgb(249, 150, 1);font-weight:bolder">📝얼리베어😇</span></h2>
+  <h3><p>
+    시험기간으로 지친 토레이 학우님들의 활기찬 아침을 위해 매학기 약 2번 정도 얼리베어 행사를 진행한다
+    <br>
+    오전 8시부터 선착순으로 토스트와 게토레이를 나누어 주는 행사이다.
+    <br>활동기간: 매학기 두번(시험기간 주차)</h3>
+    </p>
+    </div>
+    <div>
+    <img src="대천덕컵.png" alt="토레이 대천덕컵 행사" width="600" height="600"><br>
+    <h2><span style="color:rgb(249, 150, 1);font-weight:bolder">⚽대천덕컵🥅</span></h2>
+  <h3><p>
+    토레이 신부님의 한글 이름을 딴 "대천덕 컵" 풋살 대회이다. 
+    <br>
+    토레이 RC 공동체 리더십훈련 소속 팀 단위로만 신청이 가능하며 상품으로는 요기요 상품권과 트로피가 주어진다
+    <br>활동기간:9주차~11주차</h3>
+    </p>
+    </div>
+    <div>
+    <img src="토토가.png" alt="토레이에게 토레이가 행사" width="600" height="600"><br>
+    <h2><span style="color:rgb(249, 150, 1);font-weight:bolder">💌토토가📮</span></h2>
+    <p>
+    <h3> 토레이 학우들에게 칭찬, 감사, 사랑의 메세지를 전할 수 있는 특별한 행사이다
+    <br>
+    토레이 RC소속 이라면 누구나 참여가 가능하며 전하지 못했던 마음을 엽서에 답아 비전관 1층에 넣으면 홀수 주차 수요일 점호 방송 시간에 읽어준다
+    <br>활동기간:사연 신청은 짝수주차, 토토가 방송 진행은 홀수 주차 수요일 점호 방송 시간</h3>
+    </p>
+    </div>
+</section>
+
+<article>
+  <h3>담당 목사님과 헤드마스터</h3>
+
+  <div class="row">
+      <div class="column">
+          <div class="card">
+              <img src="김완진목사님.png" alt="김완진" style="width:70%">
+              <div class="container">
+                  <h3>김완진 목사님</h3>
+                  <p class="title">효암채플 별관 104호
+                  </p>
+                  <p>comforter@handong.edu</p>
+                  <button class="button"><a href="https://rc.handong.edu/40/4030.do">상세정보</a>
+              </div>
+          </div>
+      </div>
+
+
+      <p>
+      <div class="row">
+          <div class="column">
+              <div class="card">
+                  <img src="윤상헌교수님.png" alt="윤상헌" style="width:70%">
+                  <div class="container">
+                      <h3>윤상헌 교수님</h3>
+                      <p class="title">현동홀 307호</p>
+                      <p>yoon@handong.edu</p>
+                      <button class="button"><a href="https://rc.handong.edu/40/4030.do">상세정보</a>
+                  </div>
+              </div>
+          </div>
+
+
+          </p>
+</article>
+
+<div class="article2">
+  <img src="토건.jpg" alt="토레이 건물 사진" width="100%" height="100%">
+</div>
+
+<script>const image = document.getElementById('image');
+
+  image.addEventListener('mouseover', () => {
+    image.style.transform = 'scale(2)';
+  });
+
+  image.addEventListener('mouseout', () => {
+    image.style.transform = 'scale(1)';
+  });
+
+  function addComment() {
+      const commentInput = document.getElementById("comment-input");
+      const comments = document.getElementById("comments");
+
+      // 입력 값 가져오기
+      const commentText = commentInput.value.trim();
+      if (commentText === "") {
+        alert("댓글을 입력하세요!");
+        return;
+      }
+
+      // 새로운 댓글 요소 생성
+      const newComment = document.createElement("div");
+      newComment.className = "comment";
+      newComment.textContent = commentText;
+
+      // 화면에 추가
+      comments.appendChild(newComment);
+
+      // 입력란 초기화
+      commentInput.value = "";
+    }
+  </script>
+
+</body>
+</html>

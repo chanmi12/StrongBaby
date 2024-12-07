@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="jang.css" />
+  <title>팀플/장기려 페이지</title>
+</head>
+
+<body>
+  <header id="header">
+    <div>
+      <h1>
+        <p id="jang">장기려</p>
+      </h1>
+    </div>
+  </header>
+
+  <nav>
+    <div class="topnav">
+      <a href="../kai/kai.html">카이퍼</a>
+      <a href="../kama/kama.html">카마이클</a>
+      <a href="../son/son.html">손양원</a>
+      <a href="../yo/yo.html">열송학사</a>
+      <a href="../to/to.html">토레이</a>
+      <a href="jang.html">장기려</a>
+    </div>
+  </nav>
+
+  <aside> <video width="100%" height="100%" autoplay muted controls>
+    <source src="../kai/RCcharacter.mp4" type="video/mp4">
+</video>
+<h3>❤️장기려 10초 일기❤️</h3>
+  <div id="input-area">
+    <textarea id="comment-input" rows="4" placeholder="댓글을 입력하세요..."></textarea>
+    <button onclick="addComment()">댓글 저장</button>
+  </div>
+  <div id="comment-section">
+    <div id="comments"></div>
+  </div></aside>
+
+<section>
+  <OL>
+    <div>
+      <img src="레드클로즈.png" alt="장기려 레드클로즈 데이" width="600" height="600"><br>
+      <h2><span style="color:rgb(76, 14, 14);font-weight:bolder" >🌹레드 클로즈 데이🌹</h2></span>
+      <h3><p>
+        장기려의 색깔인 빨간색을 입고 더욱 단합되는 장기려를 대표하는 행사
+        <br>
+        창의성과 참여도등을 평가하여 상품이 주어진다. 
+        <br>
+        장기려 RC 모든 팀 구성원이 참여할 수 있으며 사랑, 섬김, 나눔, 우리다움을 표현하면 된다. 
+        <br>활동기간: 한학기 한번(약 5주차)</h3>
+      </p>
+    </div>
+    <div>
+      <img src="시나브로.png" alt="장기려 시나브로" width="600" height="600"><br>
+      <h2><span style="color:rgb(76, 14, 14);font-weight:bolder">🎸시나브로🎺</h2></span>
+      <h3><p>
+        장기려만의 축제로 보컬, 악기, 개인기 등 장기려 학우님들의 빛나는 달란트를 선보일 단 한번의 기회의 행사이다.
+        <br>활동기간:약 2학기 11주차</h3>
+      </p>
+    </div>
+    <div>
+      <img src="점호방송.png" alt="장기려 점호방송 체험" width="600" height="600"><br>
+      <h2><span style="color:rgb(76, 14, 14);font-weight:bolder">🎤점호 방송 체험📻</span></h2>
+    <h3><p>
+        장기려 RC 점호방송을 체험할 수 있는 기회로 장기려의 주요 사업 및 생활 안내에 대한 방송을 체험할 수 있다. 
+        <br>
+        토요일을 제외한 매일 밤 진행되는 10:50에 진행되며 오픈채팅방에 신청 후 신청 당일 10:40까지 노래를 선정하여 헤드마스터실로 가면 방송 체험을 하면 된다.
+        <br>활동기간: 접수는 최소 전날밤 까지!</h3>
+      </p>
+    </div>
+</section>
+
+<article>
+  <h3>담당 목사님과 헤드마스터</h3>
+
+  <div class="row">
+      <div class="column">
+          <div class="card">
+              <img src="이재현목사님.png" alt="이재현" style="width:70%">
+              <div class="container">
+                  <h3>이재현 목사님</h3>
+                  <p class="title">효암채플 별관 106호
+                  </p>
+                  <p>is4267@handong.edu</p>
+                  <button class="button"><a href="https://rc.handong.edu/40/4040.do">상세정보</a>
+              </div>
+          </div>
+      </div>
+
+
+      <p>
+      <div class="row">
+          <div class="column">
+              <div class="card">
+                  <img src="나원상교수님.png" alt="나원상" style="width:70%">
+                  <div class="container">
+                      <h3>나원상 교수님</h3>
+                      <p class="title">뉴턴홀 106호</p>
+                      <p>wonsang@handong.edu</p>
+                      <button class="button"><a href="https://rc.handong.edu/40/4040.do">상세정보</a>
+                  </div>
+              </div>
+          </div>
+
+
+          </p>
+</article>
+
+<div class="article2">
+  <img src="장건.jpg" alt="장기려 건물 사진" width="100%" height="100%">
+</div>
+
+<script>const image = document.getElementById('image');
+
+  image.addEventListener('mouseover', () => {
+    image.style.transform = 'scale(2)';
+  });
+
+  image.addEventListener('mouseout', () => {
+    image.style.transform = 'scale(1)';
+  });
+
+  function addComment() {
+      const commentInput = document.getElementById("comment-input");
+      const comments = document.getElementById("comments");
+
+      // 입력 값 가져오기
+      const commentText = commentInput.value.trim();
+      if (commentText === "") {
+        alert("댓글을 입력하세요!");
+        return;
+      }
+
+      // 새로운 댓글 요소 생성
+      const newComment = document.createElement("div");
+      newComment.className = "comment";
+      newComment.textContent = commentText;
+
+      // 화면에 추가
+      comments.appendChild(newComment);
+
+      // 입력란 초기화
+      commentInput.value = "";
+    }
+  </script>
+
+</body>
+</html>
